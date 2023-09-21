@@ -1,0 +1,2 @@
+# DjangoStarter
+Django Starter Project
