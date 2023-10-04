@@ -1,1 +1,14 @@
 {% extends 'layout/base_fullscreen.html' %}
+
+% load static %}
+
+{% block content %}
+    {%  include 'sections/hero.html' %}
+    {%  include 'sections/features.html' %}
+    {%  include 'sections/form.html' %}
+    {%  include 'sections/testimonials.html' %}
+    {%  include 'sections/hall_of_fame.html' %}
+    {%  include 'sections/pricing.html' %}
+    {%  include 'sections/faq.html' %}
+    {%  include 'sections/about.html' %}
+{% endblock %}
