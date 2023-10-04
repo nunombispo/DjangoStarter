@@ -54,7 +54,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'DjangoStarter.urls'
+APP_NAME = config('APP_NAME', default='DjangoStarter')
+ROOT_URLCONF = f'{APP_NAME}' + '.urls'
 
 TEMPLATES = [
     {
@@ -68,13 +69,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'DjangoStarter.context_processors.site_settings',
+                f'{APP_NAME}' + '.context_processors.site_settings',
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'DjangoStarter.wsgi.application'
+WSGI_APPLICATION = f'{APP_NAME}.wsgi.application'
 
 
 # Database
